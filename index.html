@@ -1,122 +1,128 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>博牛社区关停公告</title>
 
 <style>
-  :root { --vh: 1vh; }
+:root { --vh: 1vh; }
 
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: #000; /* 防止露底變灰 */
-    color: #fff;
-    font-family: -apple-system, BlinkMacSystemFont,
-      "PingFang SC","PingFang TC",
-      "Microsoft YaHei","Microsoft JhengHei", Arial, sans-serif;
-  }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "PingFang SC","PingFang TC",
+    "Microsoft YaHei","Microsoft JhengHei", Arial, sans-serif;
+}
 
-  /* 背景用固定定位，永遠鋪滿整個可視區 */
-  .bg {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background:
-      linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-      url("IMG_20251219_164356_210.png") center/cover no-repeat;
-  }
+/* 背景（必殺寫法） */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("./IMG_20251219_164356_210.png") center / cover no-repeat;
+}
 
-  /* 用 JS 設定的真實高度，避免 Chrome 露邊 */
-  .wrap{
-    min-height: calc(var(--vh) * 100);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding: 24px;
-  }
+/* 內容區 */
+.wrap{
+  min-height: calc(var(--vh) * 100);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 24px;
+}
 
-  .panel{
-    width: min(720px, 92vw);
-    text-align:center;
-    transform: translateY(-4%);
-  }
+.panel{
+  width: min(720px, 92vw);
+  text-align: center;
+  transform: translateY(-4%);
+}
 
-  .logo{
-    width:110px;
-    height:auto;
-    display:block;
-    margin:0 auto 16px;
-  }
+.logo{
+  width:110px;
+  display:block;
+  margin:0 auto 16px;
+}
 
-  .title{
-    font-size:16px;
-    font-weight:600;
-    letter-spacing:.08em;
-    margin:10px 0 18px;
-  }
+.title{
+  font-size:16px;
+  font-weight:600;
+  letter-spacing:.08em;
+  margin:10px 0 18px;
+}
 
-  .text{
-    font-size:13px;
-    line-height:2;
-    opacity:.95;
-  }
-  .text p{ margin:14px 0; }
+.text{
+  font-size:13px;
+  line-height:2;
+  opacity:.95;
+}
+.text p{ margin:14px 0; }
 
-  .sign{
-    margin-top:26px;
-    font-size:12px;
-    line-height:1.8;
-    opacity:.85;
-  }
+.sign{
+  margin-top:26px;
+  font-size:12px;
+  line-height:1.8;
+  opacity:.85;
+}
 
-  @media (min-width:768px){
-    .logo{ width:130px; }
-    .title{ font-size:18px; }
-    .text{ font-size:14px; }
-    .sign{ font-size:13px; }
-  }
+@media (min-width:768px){
+  .logo{ width:130px; }
+  .title{ font-size:18px; }
+  .text{ font-size:14px; }
+  .sign{ font-size:13px; }
+}
 </style>
 </head>
 
 <body>
-  <div class="bg" aria-hidden="true"></div>
+<div class="wrap">
+  <div class="panel">
 
-  <div class="wrap">
-    <div class="panel">
-      <img src="IMG_20251219_164415_683.png" class="logo" alt="博牛社区">
+    <img src="./IMG_20251219_164415_683.png" class="logo" alt="博牛社区">
 
-      <div class="title">博牛社区关停公告</div>
+    <div class="title">博牛社区关停公告</div>
 
-      <div class="text">
-        <p>亲爱的博牛社区用户、会员及合作伙伴：</p>
+    <div class="text">
+      <p>亲爱的博牛社区用户、会员及合作伙伴：</p>
 
-        <p>
-          感谢您自 2014 年以来对博牛社区的支持与陪伴。基于战略调整，博牛社区将于 2025 年 12 月 31 日起正式停止运营，并同步关闭相关服务器及服务功能。在正式关停前，我们将持续做好必要的运营支持与沟通工作，确保整体关停流程平稳、有序推进，尽量减少对用户及合作伙伴的影响。
-        </p>
+      <p>
+        感谢您自 2014 年以来对博牛社区的支持与陪伴。基于战略调整，博牛社区将于
+        2025 年 12 月 31 日起正式停止运营，并同步关闭相关服务器及服务功能。
+        在正式关停前，我们将持续做好必要的运营支持与沟通工作，
+        确保整体关停流程平稳、有序推进，尽量减少对用户及合作伙伴的影响。
+      </p>
 
-        <p>
-          由衷感谢每一位支持过我们的用户与合作伙伴。无论您是一路陪伴至今的老朋友，还是曾在这里短暂停留，我们都心怀感激。虽然博牛社区即将画上句号，但这段共同走过的时光，将始终被我们珍视。
-        </p>
-      </div>
-
-      <div class="sign">
-        <div>博牛社区 敬上</div>
-        <div>2026 年 1 月 1 日</div>
-      </div>
+      <p>
+        由衷感谢每一位支持过我们的用户与合作伙伴。
+        无论您是一路陪伴至今的老朋友，还是曾在这里短暂停留，我们都心怀感激。
+        虽然博牛社区即将画上句号，但这段共同走过的时光，将始终被我们珍视。
+      </p>
     </div>
-  </div>
 
-  <script>
-    // 真實視窗高度修正（解決手機 Chrome 底部露邊）
-    function setVH() {
-      document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
-    }
-    setVH();
-    window.addEventListener('resize', setVH);
-    window.addEventListener('orientationchange', setVH);
-  </script>
+    <div class="sign">
+      博牛社区 敬上<br>
+      2026 年 1 月 1 日
+    </div>
+
+  </div>
+</div>
+
+<script>
+function setVH(){
+  document.documentElement.style.setProperty(
+    '--vh', (window.innerHeight * 0.01) + 'px'
+  );
+}
+setVH();
+window.addEventListener('resize', setVH);
+window.addEventListener('orientationchange', setVH);
+</script>
 </body>
 </html>
