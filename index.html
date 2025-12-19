@@ -6,118 +6,124 @@
 <title>博牛社区关停公告</title>
 
 <style>
-  html,body{
-    margin:0;
-    padding:0;
-    height:100%;
-    font-family:-apple-system,BlinkMacSystemFont,
-      "PingFang SC","PingFang TC",
-      "Microsoft YaHei","Microsoft JhengHei",Arial,sans-serif;
-    -webkit-text-size-adjust: 100%; /* ✅ 防止手機自動放大字造成爆換行 */
-    text-size-adjust: 100%;
-  }
+html,body{
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family:-apple-system,BlinkMacSystemFont,
+    "PingFang SC","PingFang TC",
+    "Microsoft YaHei","Microsoft JhengHei",Arial,sans-serif;
 
-  body{
-    background:
-      linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-      url("./IMG_20251219_164356_210.png") center/cover no-repeat;
-    color:#fff;
-  }
+  /* 防止 Android Chrome 自動放大文字 */
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
 
-  .wrapper{
-    min-height:100svh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:24px 18px;
-  }
+body{
+  background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("./IMG_20251219_164356_210.png") center/cover no-repeat;
+  color:#fff;
+}
 
-  .content{
-    width:min(780px, 94vw);
-    text-align:center;
-  }
+.wrapper{
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px 18px;
+}
 
-  .logo{
-    width:120px;
-    height:auto;
-    display:block;
-    margin:0 auto 18px;
-    opacity:.95;
-  }
+.content{
+  text-align:center;
+  width:100%;
+}
 
-  .title{
-    font-size:14px;
-    font-weight:600;
-    letter-spacing:.12em;
-    margin: 2px 0 14px;
-    opacity:.95;
-  }
+/* Logo */
+.logo{
+  width:120px;
+  display:block;
+  margin:0 auto 18px;
+}
 
-  .salute{
-    font-size:13px;
-    font-weight:500;
-    opacity:.92;
-    margin: 0 0 12px;
-  }
+/* 標題（跟圖一樣：不大） */
+.title{
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:.12em;
+  margin-bottom:14px;
+}
 
-  /* ✅ 關鍵：用 ch 控制每行字數，讓它自然換行，不要用 <br> */
-  .text{
-    max-width: 34ch;     /* 像原圖那種窄欄 */
-    width: 100%;
-    margin: 0 auto;
-    font-size:12px;
-    line-height: 2.05;
-    opacity:.90;
-    text-align:center;
-  }
+/* 稱呼 */
+.salute{
+  font-size:13px;
+  margin-bottom:12px;
+  opacity:.95;
+}
 
-  .text p{
-    margin: 14px 0;
-  }
+/* 內文：重點在「窄欄寬」而不是 <br> */
+.text{
+  max-width:34ch;     /* 控制每行字數，像原圖 */
+  margin:0 auto;
+  font-size:12px;
+  line-height:2.05;
+  opacity:.9;
+}
 
-  .footer{
-    margin-top: 22px;
-    font-size:12px;
-    line-height:1.9;
-    opacity:.85;
-  }
+.text p{
+  margin:14px 0;
+}
 
-  @media (min-width:768px){
-    .logo{ width:140px; }
-    .title{ font-size:15px; }
-    .salute{ font-size:14px; }
-    .text{ font-size:13px; max-width: 38ch; }
-    .footer{ font-size:12.5px; }
-  }
+/* 落款 */
+.footer{
+  margin-top:22px;
+  font-size:12px;
+  line-height:1.9;
+  opacity:.85;
+}
+
+/* 桌機微調 */
+@media (min-width:768px){
+  .logo{ width:140px; }
+  .title{ font-size:15px; }
+  .salute{ font-size:14px; }
+  .text{ font-size:13px; max-width:38ch; }
+  .footer{ font-size:13px; }
+}
 </style>
 </head>
 
 <body>
-  <div class="wrapper">
-    <div class="content">
+<div class="wrapper">
+  <div class="content">
 
-      <img src="./IMG_20251219_164415_683.png" class="logo" alt="博牛社区">
+    <img src="./IMG_20251219_164415_683.png" class="logo" alt="博牛社区">
 
-      <div class="title">博牛社区关停公告</div>
+    <div class="title">博牛社区关停公告</div>
 
-      <div class="salute">亲爱的博牛社区用户、会员及合作伙伴：</div>
+    <div class="salute">亲爱的博牛社区用户、会员及合作伙伴：</div>
 
-      <div class="text">
-        <p>
-          感谢您自 2014 年以来对博牛社区的支持与陪伴。基于战略调整，博牛社区将于 2025 年 12 月 31 日起正式停止运营，并同步关闭相关服务器及服务功能。在正式关停前，我们将持续做好必要的运营支持与沟通工作，确保整体关停流程平稳、有序推进，尽量减少对用户及合作伙伴的影响。
-        </p>
+    <div class="text">
+      <p>
+        感谢您自 2014 年以来对博牛社区的支持与陪伴。基于战略调整，博牛社区将于
+        2025 年 12 月 31 日起正式停止运营，并同步关闭相关服务器及服务功能。
+        在正式关停前，我们将持续做好必要的运营支持与沟通工作，
+        确保整体关停流程平稳、有序推进，尽量减少对用户及合作伙伴的影响。
+      </p>
 
-        <p>
-          由衷感谢每一位支持过我们的用户与合作伙伴。无论您是一路陪伴至今的老朋友，还是曾在这里短暂停留，我们都心怀感激。虽然博牛社区即将画上句号，但这段共同走过的时光，将始终被我们珍视。
-        </p>
-      </div>
-
-      <div class="footer">
-        <div>博牛社区 敬上</div>
-        <div>2026 年 1 月 1 日</div>
-      </div>
-
+      <p>
+        由衷感谢每一位支持过我们的用户与合作伙伴。
+        无论您是一路陪伴至今的老朋友，还是曾在这里短暂停留，我们都心怀感激。
+        虽然博牛社区即将画上句号，但这段共同走过的时光，将始终被我们珍视。
+      </p>
     </div>
+
+    <div class="footer">
+      博牛社区 敬上<br>
+      2026 年 1 月 1 日
+    </div>
+
   </div>
+</div>
 </body>
 </html>
