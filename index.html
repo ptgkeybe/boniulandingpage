@@ -7,10 +7,14 @@
 
 <style>
   html,body{
-    margin:0; padding:0; height:100%;
+    margin:0;
+    padding:0;
+    height:100%;
     font-family:-apple-system,BlinkMacSystemFont,
       "PingFang SC","PingFang TC",
       "Microsoft YaHei","Microsoft JhengHei",Arial,sans-serif;
+    -webkit-text-size-adjust: 100%; /* ✅ 防止手機自動放大字造成爆換行 */
+    text-size-adjust: 100%;
   }
 
   body{
@@ -28,14 +32,11 @@
     padding:24px 18px;
   }
 
-  /* 整體位置：跟圖一樣偏上但不會切到 */
   .content{
     width:min(780px, 94vw);
     text-align:center;
-    padding-top: 6px;
   }
 
-  /* Logo：跟圖一樣大、上方 */
   .logo{
     width:120px;
     height:auto;
@@ -44,7 +45,6 @@
     opacity:.95;
   }
 
-  /* 標題：圖上其實不大 */
   .title{
     font-size:14px;
     font-weight:600;
@@ -53,7 +53,6 @@
     opacity:.95;
   }
 
-  /* 第二行稱呼：比內文稍微大一點點 */
   .salute{
     font-size:13px;
     font-weight:500;
@@ -61,13 +60,13 @@
     margin: 0 0 12px;
   }
 
-  /* 內文：重點是「窄欄寬」+ 置中 */
+  /* ✅ 關鍵：用 ch 控制每行字數，讓它自然換行，不要用 <br> */
   .text{
-    width: 24em;              /* 控制每行寬度（像圖上那樣窄） */
-    max-width: 92vw;
+    max-width: 34ch;     /* 像原圖那種窄欄 */
+    width: 100%;
     margin: 0 auto;
-    font-size:12px;            /* 圖上字很小 */
-    line-height: 2.05;         /* 行距鬆 */
+    font-size:12px;
+    line-height: 2.05;
     opacity:.90;
     text-align:center;
   }
@@ -76,7 +75,6 @@
     margin: 14px 0;
   }
 
-  /* 落款：更小，間距拉開 */
   .footer{
     margin-top: 22px;
     font-size:12px;
@@ -84,16 +82,11 @@
     opacity:.85;
   }
 
-  .footer .date{
-    margin-top: 2px;
-  }
-
-  /* 桌機：放大一點，但維持同樣排版比例 */
   @media (min-width:768px){
     .logo{ width:140px; }
     .title{ font-size:15px; }
     .salute{ font-size:14px; }
-    .text{ font-size:13px; width: 26em; }
+    .text{ font-size:13px; max-width: 38ch; }
     .footer{ font-size:12.5px; }
   }
 </style>
@@ -111,23 +104,17 @@
 
       <div class="text">
         <p>
-          感谢您自 2014 年以来对博牛社区的支持与陪伴。<br>
-          基于战略调整，博牛社区将于 2025 年 12 月 31 日起正式停止运营，<br>
-          并同步关闭相关服务器及服务功能。<br>
-          在正式关停前，我们将持续做好必要的运营支持与沟通工作，<br>
-          确保整体关停流程平稳、有序推进，尽量减少对用户及合作伙伴的影响。
+          感谢您自 2014 年以来对博牛社区的支持与陪伴。基于战略调整，博牛社区将于 2025 年 12 月 31 日起正式停止运营，并同步关闭相关服务器及服务功能。在正式关停前，我们将持续做好必要的运营支持与沟通工作，确保整体关停流程平稳、有序推进，尽量减少对用户及合作伙伴的影响。
         </p>
 
         <p>
-          由衷感谢每一位支持过我们的用户与合作伙伴。<br>
-          无论您是一路陪伴至今的老朋友，还是曾在这里短暂停留，我们都心怀感激。<br>
-          虽然博牛社区即将画上句号，但这段共同走过的时光，将始终被我们珍视。
+          由衷感谢每一位支持过我们的用户与合作伙伴。无论您是一路陪伴至今的老朋友，还是曾在这里短暂停留，我们都心怀感激。虽然博牛社区即将画上句号，但这段共同走过的时光，将始终被我们珍视。
         </p>
       </div>
 
       <div class="footer">
         <div>博牛社区 敬上</div>
-        <div class="date">2026 年 1 月 1 日</div>
+        <div>2026 年 1 月 1 日</div>
       </div>
 
     </div>
