@@ -6,12 +6,12 @@
 <title>博牛社区关停公告</title>
 
 <style>
-/* ✅ 基礎：避免露底灰色、避免手機自動放大字 */
+/* ========= 基礎重置 ========= */
 html, body{
   margin:0;
   padding:0;
   min-height:100svh;
-  background:#000;                 /* ✅ 沒載到背景圖時也不會灰 */
+  background:#000; /* 保底，避免露灰 */
   color:#fff;
   font-family:-apple-system,BlinkMacSystemFont,
     "PingFang SC","PingFang TC",
@@ -20,15 +20,17 @@ html, body{
   text-size-adjust:100%;
 }
 
-/* ✅ 背景：加上 #000 保底（最右邊那個） */
+/* ========= 背景只放在 body ========= */
 body{
-  background:
-    linear-gradient(rgba(0,0,0,.32),rgba(0,0,0,.32)),
-    url("./IMG_20251219_164356_210.png") center/cover no-repeat,
-    #000;
+  background-image:
+    linear-gradient(rgba(0,0,0,.32), rgba(0,0,0,.32)),
+    url("./IMG_20251219_164356_210.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
-/* ✅ 主容器：一定撐滿螢幕 */
+/* ========= 主版面 ========= */
 .page{
   min-height:100svh;
   display:flex;
@@ -38,6 +40,7 @@ body{
   box-sizing:border-box;
 }
 
+/* 內容卡片（透明） */
 .card{
   width:100%;
   max-width:680px;
@@ -60,7 +63,7 @@ body{
   margin:0 0 20px;
 }
 
-/* 內文區 */
+/* 內文 */
 .content{
   font-size:13px;
   line-height:2.1;
@@ -79,7 +82,7 @@ body{
   opacity:.85;
 }
 
-/* 桌機微調 */
+/* 桌機 */
 @media (min-width:768px){
   .logo{ width:160px; }
   .title{ font-size:16px; }
