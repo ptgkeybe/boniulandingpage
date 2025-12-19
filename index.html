@@ -6,109 +6,120 @@
 <title>博牛社区关停公告</title>
 
 <style>
-  html,body{
-    margin:0;
-    padding:0;
-    height:100%;
-    font-family:-apple-system,BlinkMacSystemFont,
-      "PingFang SC","PingFang TC",
-      "Microsoft YaHei","Microsoft JhengHei",Arial,sans-serif;
-    -webkit-text-size-adjust:100%;
-    text-size-adjust:100%;
-  }
+html,body{
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family:-apple-system,BlinkMacSystemFont,
+    "PingFang SC","PingFang TC",
+    "Microsoft YaHei","Microsoft JhengHei",Arial,sans-serif;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
 
-  body{
-    background:
-      linear-gradient(rgba(0,0,0,.38), rgba(0,0,0,.38)),
-      url("./IMG_20251219_164356_210.png") center/cover no-repeat;
-    color:#fff;
-  }
+body{
+  background:
+    linear-gradient(rgba(0,0,0,.32),rgba(0,0,0,.32)),
+    url("./IMG_20251219_164356_210.png") center/cover no-repeat;
+  color:#fff;
+}
 
-  .wrap{
-    min-height:100svh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:24px 16px;
-  }
+.page{
+  min-height:100svh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:32px 20px;
+}
 
-  .card{
-    width:min(520px, 92vw);
-    text-align:center;
-    transform: translateY(-2%);
-  }
+.card{
+  width:100%;
+  max-width:680px;
+  text-align:center;
+}
 
-  .logo{
-    width:140px;
-    height:auto;
-    display:block;
-    margin:0 auto 18px;
-    opacity:.95;
-  }
+/* LOGO */
+.logo{
+  width:140px;
+  margin:0 auto 18px;
+  display:block;
+  opacity:.95;
+}
 
-  /* 圖上標題其實偏小 */
-  .title{
-    font-size:14px;
-    font-weight:600;
-    letter-spacing:.10em;
-    margin:0 0 14px;
-    opacity:.95;
-  }
+/* 標題：小而穩 */
+.title{
+  font-size:15px;
+  font-weight:600;
+  letter-spacing:.12em;
+  margin-bottom:20px;
+}
 
-  /* 下面整段文字：保留換行，像海報 */
-  .notice{
-    width:min(360px, 86vw);   /* ✅ 控制每行寬度，像你圖那樣窄 */
-    margin:0 auto;
-    font-size:12px;
-    line-height:2.05;
-    opacity:.92;
+/* 內文區 */
+.content{
+  font-size:13px;
+  line-height:2.1;
+  opacity:.92;
+}
 
-    white-space: pre-line;    /* ✅ 依照文字中的換行顯示 */
-    word-break: keep-all;
-    line-break: strict;
-  }
+/* 每段像海報 */
+.content p{
+  margin:20px 0;
+}
 
-  .sign{
-    margin-top:18px;
-    font-size:12px;
-    line-height:1.9;
-    opacity:.85;
-    white-space: pre-line;
-  }
+/* 落款 */
+.footer{
+  margin-top:28px;
+  font-size:12px;
+  line-height:1.9;
+  opacity:.85;
+}
 
-  @media (min-width:768px){
-    .card{ width:min(620px, 90vw); }
-    .logo{ width:170px; }
-    .title{ font-size:15px; }
-    .notice{ width:380px; font-size:13px; }
-    .sign{ font-size:12.5px; }
-  }
+@media (min-width:768px){
+  .logo{ width:160px; }
+  .title{ font-size:16px; }
+  .content{ font-size:14px; }
+  .footer{ font-size:13px; }
+}
 </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="card">
-      <img class="logo" src="./IMG_20251219_164415_683.png" alt="博牛社区">
+<div class="page">
+  <div class="card">
 
-      <div class="title">博牛社区关停公告</div>
+    <img src="./IMG_20251219_164415_683.png" class="logo" alt="博牛社区">
 
-      <!-- ✅ 這裡就是照你圖片「一行一行」排版 -->
-      <div class="notice">亲爱的博牛社区用户、会员及合作伙伴：
+    <div class="title">博牛社区关停公告</div>
 
-感谢您自 2014 年以来对博牛社区的支持与陪伴。
-基于战略调整，博牛社区将于 2025 年 12 月 31 日起正式停止运营，
-并同步关闭相关服务器及服务功能。
-在正式关停前，我们将持续做好必要的运营支持与沟通工作，
-确保整体关停流程平稳、有序推进，尽量减少对用户及合作伙伴的影响。
+    <div class="content">
+      <p>亲爱的博牛社区用户、会员及合作伙伴：</p>
 
-由衷感谢每一位支持过我们的用户与合作伙伴。
-无论您是一路陪伴至今的老朋友，还是曾在这里短暂停留，我们都心怀感激。
-虽然博牛社区即将画上句号，但这段共同走过的时光，将始终被我们珍视。</div>
+      <p>
+        感谢您自 2014 年以来对博牛社区的支持与陪伴。
+        基于战略调整，博牛社区将于 2025 年 12 月 31 日起正式停止运营，
+        并同步关闭相关服务器及服务功能。
+        在正式关停前，我们将持续做好必要的运营支持与沟通工作，
+        确保整体关停流程平稳、有序推进，
+        尽量减少对用户及合作伙伴的影响。
+      </p>
 
-      <div class="sign">博牛社区 敬上
-2026 年 1 月 1 日</div>
+      <p>
+        由衷感谢每一位支持过我们的用户与合作伙伴。
+        无论您是一路陪伴至今的老朋友，
+        还是曾在这里短暂停留，
+        我们都心怀感激。
+        虽然博牛社区即将画上句号，
+        但这段共同走过的时光，
+        将始终被我们珍视。
+      </p>
     </div>
+
+    <div class="footer">
+      博牛社区 敬上<br>
+      2026 年 1 月 1 日
+    </div>
+
   </div>
+</div>
 </body>
 </html>
