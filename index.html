@@ -19,18 +19,23 @@ html, body {
     "Microsoft YaHei","Microsoft JhengHei", Arial, sans-serif;
 }
 
-/* 背景（必殺寫法） */
+/* ✅ 最穩背景寫法（GitHub Pages + 手機必過） */
 body::before{
   content:"";
   position: fixed;
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    radial-gradient(
+      ellipse at center,
+      rgba(0,0,0,.20) 0%,
+      rgba(0,0,0,.35) 55%,
+      rgba(0,0,0,.50) 100%
+    ),
     url("./IMG_20251219_164356_210.png") center / cover no-repeat;
 }
 
-/* 內容區 */
+/* 內容容器 */
 .wrap{
   min-height: calc(var(--vh) * 100);
   display:flex;
@@ -39,18 +44,21 @@ body::before{
   padding: 24px;
 }
 
+/* 主內容（略偏上，貼近你原圖） */
 .panel{
   width: min(720px, 92vw);
   text-align: center;
   transform: translateY(-4%);
 }
 
+/* Logo */
 .logo{
   width:110px;
   display:block;
   margin:0 auto 16px;
 }
 
+/* 標題 */
 .title{
   font-size:16px;
   font-weight:600;
@@ -58,6 +66,7 @@ body::before{
   margin:10px 0 18px;
 }
 
+/* 內文 */
 .text{
   font-size:13px;
   line-height:2;
@@ -65,6 +74,7 @@ body::before{
 }
 .text p{ margin:14px 0; }
 
+/* 落款 */
 .sign{
   margin-top:26px;
   font-size:12px;
@@ -72,6 +82,7 @@ body::before{
   opacity:.85;
 }
 
+/* 桌機微調 */
 @media (min-width:768px){
   .logo{ width:130px; }
   .title{ font-size:18px; }
@@ -115,6 +126,7 @@ body::before{
 </div>
 
 <script>
+/* ✅ 手機高度修正（解決 Chrome 底部灰邊） */
 function setVH(){
   document.documentElement.style.setProperty(
     '--vh', (window.innerHeight * 0.01) + 'px'
